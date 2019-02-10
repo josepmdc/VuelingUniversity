@@ -20,6 +20,15 @@ namespace ExtensionMethods
 
                 switch (Console.ReadLine())
                 {
+                    case "?":
+                        Console.WriteLine("1 = Extension Methods");
+                        Console.WriteLine("2 = Boxing y Unboxing");
+                        Console.WriteLine("3 = Using y Dispose");
+                        Console.WriteLine("exit = Salir y cerrar programa");
+                        Console.WriteLine("? = Ayuda");
+                        Console.WriteLine();
+                        break;
+
                     case "1":
                         // Extension Methods
                         Console.WriteLine("Escribe una frase y la giraremos con un extension method:");
@@ -33,37 +42,40 @@ namespace ExtensionMethods
                         string name = "asdf";
 
                         // Boxing
-                        object[] array = box(num, name);
-                        Console.WriteLine(array);
+                        object[] array = Box(num, name);
 
                         // Unboxing
                         int unboxedNum = (int) array[0];
                         string unboxedName = array[1].ToString();
-
                         Console.WriteLine("unboxedNum = {0}, unboxedName = {1}", unboxedNum, unboxedName);
+
                         Console.WriteLine();
                         break;
 
                     case "3":
+                        DisposableClass dc = null;
+                        // Dispose usando el using
+                        using (dc = new DisposableClass())
+                        {
+                            Console.WriteLine("Cosas que hariamos dentro del using");
+                        }
+
+                        // Dispose usando try finally
+                        try
+                        {
+                             dc = new DisposableClass();
+                            Console.WriteLine("Cosas que hariamos dentro del try");
+                        } finally
+                        {
+                            dc.Dispose();
+                        }
 
                         break;
-
-                    case "4":
-                        break;
-
+                        
                     case "exit":
                         exit = true;
                         break;
-
-                    case "?":
-                        Console.WriteLine("1 = Extension Methods");
-                        Console.WriteLine("2 = Boxing y Unboxing");
-                        Console.WriteLine("3 = Using y Dispose");
-                        Console.WriteLine("4 = Clases genericas");
-                        Console.WriteLine("exit = Salir y cerrar programa");
-                        Console.WriteLine("? = Ayuda");
-                        Console.WriteLine();
-                        break;
+                        
                     default:
                         Console.WriteLine("Entrada incorrecta");
                         Console.WriteLine("Pulsa '?' para ver que comandos hay disponibles");
@@ -74,7 +86,7 @@ namespace ExtensionMethods
             
         }
 
-        static object[] box(params object[] arg)
+        static object[] Box(params object[] arg)
         {
             return arg;
         }

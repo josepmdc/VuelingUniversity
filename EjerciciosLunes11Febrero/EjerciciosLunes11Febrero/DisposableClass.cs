@@ -10,7 +10,8 @@ namespace ExtensionMethods
     {
         public void Dispose()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Se ha ejecutado Dispose");
+            Console.WriteLine();
         }
     }
 }
