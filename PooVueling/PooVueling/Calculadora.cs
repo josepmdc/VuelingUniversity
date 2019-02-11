@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace PooVueling
 {
     public class Calculadora : ICalculadora, ICloneable
     {
+        public static readonly ILog log = LogManager
+            .GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         public object Clone()
         {
             throw new NotImplementedException("The method is not implemented yet");
@@ -15,7 +19,15 @@ namespace PooVueling
 
         public int Division(int num1, int num2)
         {
-            return num1 / num2;
+            try
+            {
+                return num1 / num2;
+            }
+            catch (DivideByZeroException e)
+            {
+                log.Info(e.Message);
+                throw;
+            }   
         }
 
         public int Multiplicacion(int num1, int num2)

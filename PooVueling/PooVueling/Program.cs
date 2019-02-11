@@ -8,12 +8,11 @@ namespace PooVueling
 {
     class Program
     {
-        public Program()
-        {
-        }
-
         static void Main(string[] args)
         {
+            Calculadora calc = new Calculadora();
+            calc.Division(2, 0);
+            Console.ReadLine();
         }
     }
 }

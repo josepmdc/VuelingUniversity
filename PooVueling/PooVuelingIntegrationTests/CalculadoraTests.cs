@@ -14,10 +14,17 @@ namespace PooVueling.Tests
         ICalculadora iCalculadora = new Calculadora();
         
         [DataRow(2, 2, 1)]
-        [DataRow(10, 2, 5)]
         [DataRow(50, 2, 25)]
         [DataTestMethod]
         public void DivisionTest(int num1, int num2, int resultado)
+        {
+            Assert.IsTrue(iCalculadora.Division(num1, num2) == resultado);
+        }
+        
+        [DataRow(10, 0, 5)]
+        [DataTestMethod]
+        [ExpectedException(typeof(DivideByZeroException))]
+        public void DivisionTestException(int num1, int num2, int resultado)
         {
             Assert.IsTrue(iCalculadora.Division(num1, num2) == resultado);
         }
