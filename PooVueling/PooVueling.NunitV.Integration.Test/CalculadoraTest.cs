@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace PooVueling.NunitV.Integration.Test
 {
     [TestFixture]
@@ -12,28 +13,28 @@ namespace PooVueling.NunitV.Integration.Test
     {
         ICalculadora iCalculadora = new Calculadora();
 
-        [TestCase]
-        public void Suma()
+        [TestCase(20, 11, 31)]
+        public void Suma(int num1, int num2, int resultado)
         {
-            Assert.AreEqual(31, iCalculadora.Suma(20, 11));
+            Assert.AreEqual(31, iCalculadora.Suma(num1, num2));
         }
 
-        [TestCase]
-        public void Resta()
+        [TestCase(32, 9, 23)]
+        public void Resta(int num1, int num2, int resultado)
         {
-            Assert.AreEqual(23, iCalculadora.Resta(32, 9));
+            Assert.AreEqual(resultado, iCalculadora.Resta(num1, num2));
         }
 
-        [TestCase]
-        public void Multiplicacion()
+        [TestCase(5, 5, 25)]
+        public void Multiplicacion(int num1, int num2, int resultado)
         {
-            Assert.AreEqual(25, iCalculadora.Multiplicacion(5, 5));
+            Assert.AreEqual(resultado, iCalculadora.Multiplicacion(num1, num2));
         }
 
-        [TestCase]
-        public void Division()
+        [TestCase(80, 2, 40)]
+        public void Division(int num1, int num2, int resultado)
         {
-            Assert.AreEqual(40, iCalculadora.Division(80, 2));
+            Assert.AreEqual(resultado, iCalculadora.Division(num1, num2));
         }
 
 
