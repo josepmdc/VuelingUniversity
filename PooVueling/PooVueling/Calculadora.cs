@@ -25,9 +25,9 @@ namespace PooVueling
             }
             catch (DivideByZeroException e)
             {
-                log.Info(e.Message);
+                log.Error(e.Message);
                 throw;
-            }   
+            }
         }
 
         public int Multiplicacion(int num1, int num2)

@@ -11,7 +11,7 @@ namespace PooVueling.NunitV.Integration.Test
     [TestFixture]
     public class CalculadoraTest
     {
-        ICalculadora iCalculadora = new Calculadora();
+        readonly ICalculadora iCalculadora = new Calculadora();
 
         [TestCase(20, 11, 31)]
         public void Suma(int num1, int num2, int resultado)
@@ -35,6 +35,14 @@ namespace PooVueling.NunitV.Integration.Test
         public void Division(int num1, int num2, int resultado)
         {
             Assert.AreEqual(resultado, iCalculadora.Division(num1, num2));
+            Throws.TypeOf<DivideByZeroException>();
+        }
+
+        [TestCase(80, 0)]
+        public void DivisionByZero(int num1, int num2)
+        {
+            Assert.That(() => iCalculadora.Division(num1, num2),
+            Throws.TypeOf<DivideByZeroException>());
         }
 
 
