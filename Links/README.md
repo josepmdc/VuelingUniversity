@@ -2,7 +2,7 @@
 
 ## BDD - Gherkin
 
-- [ ] [Test](https://www.javiergarzas.com/2016/05/gherkin-10-buenas-practicas-cuenta-la-hora-escribir-features-parte-1.html){:target="_blank"}
+- [ ] https://www.javiergarzas.com/2016/05/gherkin-10-buenas-practicas-cuenta-la-hora-escribir-features-parte-1.html
 
 - [ ] https://www.javiergarzas.com/2014/12/bdd-behavior-driven-development-1.html
 
