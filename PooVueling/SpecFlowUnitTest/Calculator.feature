@@ -11,20 +11,29 @@ Scenario: Add two numbers
 	When I press add
 	Then the result should be 120 on the screen
 
-Scenario: Subtract two numbers
-	Given I have entered 5 into the calculator
-	And I have also entered 2 into the calculator
+Scenario Outline: Subtract two numbers
+	Given I have entered <input_1> into the calculator
+	And I have also entered <input_2> into the calculator
 	When I press subtract
-	Then the result should be 3 on the screen
+	Then the result should be <output> on the screen
+		Examples: 
+		| input_1 | input_2 | button   | output |
+		| 5       | 2       | subtract | 3      |
 
-Scenario: Multiply two numbers
-	Given I have entered 5 into the calculator
-	And I have also entered 2 into the calculator
-	When I press multiply
-	Then the result should be 10 on the screen
+Scenario Outline: Multiply two numbers
+	Given I have entered <input_1> into the calculator
+	And I have also entered <input_2> into the calculator
+	When I press <button>
+	Then the result should be <output> on the screen
+		Examples: 
+		| input_1 | input_2 | button   | output |
+		| 10      | 2       | multiply | 20     |
 
-Scenario: Divide two numbers
-	Given I have entered 50 into the calculator
-	And I have also entered 2 into the calculator
-	When I press divide
-	Then the result should be 25 on the screen
+Scenario Outline: Divide two numbers
+	Given I have entered <input_1> into the calculator
+	And I have also entered <input_2> into the calculator
+	When I press <button>
+	Then the result should be <output> on the screen
+		Examples: 
+		| input_1 | input_2 | button   | output |
+		| 50      | 2       | divide   | 25     |

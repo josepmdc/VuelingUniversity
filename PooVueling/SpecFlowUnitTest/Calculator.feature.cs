@@ -89,61 +89,82 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Subtract two numbers", SourceLine=13)]
-        public virtual void SubtractTwoNumbers()
+        public virtual void SubtractTwoNumbers(string input_1, string input_2, string button, string output, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtract two numbers", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtract two numbers", null, exampleTags);
 #line 14
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 15
- testRunner.Given("I have entered 5 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", input_1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
- testRunner.And("I have also entered 2 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I have also entered {0} into the calculator", input_2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
  testRunner.When("I press subtract", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
- testRunner.Then("the result should be 3 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the result should be {0} on the screen", output), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers", SourceLine=19)]
-        public virtual void MultiplyTwoNumbers()
+        [TechTalk.SpecRun.ScenarioAttribute("Subtract two numbers, 5", SourceLine=20)]
+        public virtual void SubtractTwoNumbers_5()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply two numbers", null, ((string[])(null)));
-#line 20
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 21
- testRunner.Given("I have entered 5 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
- testRunner.And("I have also entered 2 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 14
+this.SubtractTwoNumbers("5", "2", "subtract", "3", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void MultiplyTwoNumbers(string input_1, string input_2, string button, string output, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply two numbers", null, exampleTags);
 #line 23
- testRunner.When("I press multiply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 24
- testRunner.Then("the result should be 10 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Given(string.Format("I have entered {0} into the calculator", input_1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.And(string.Format("I have also entered {0} into the calculator", input_2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.When(string.Format("I press {0}", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+ testRunner.Then(string.Format("the result should be {0} on the screen", output), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers", SourceLine=25)]
-        public virtual void DivideTwoNumbers()
+        [TechTalk.SpecRun.ScenarioAttribute("Multiply two numbers, 10", SourceLine=29)]
+        public virtual void MultiplyTwoNumbers_10()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, ((string[])(null)));
-#line 26
+#line 23
+this.MultiplyTwoNumbers("10", "2", "multiply", "20", ((string[])(null)));
+#line hidden
+        }
+        
+        public virtual void DivideTwoNumbers(string input_1, string input_2, string button, string output, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, exampleTags);
+#line 32
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 27
- testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
- testRunner.And("I have also entered 2 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
- testRunner.When("I press divide", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
- testRunner.Then("the result should be 25 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+ testRunner.Given(string.Format("I have entered {0} into the calculator", input_1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+ testRunner.And(string.Format("I have also entered {0} into the calculator", input_2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.When(string.Format("I press {0}", button), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+ testRunner.Then(string.Format("the result should be {0} on the screen", output), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Divide two numbers, 50", SourceLine=38)]
+        public virtual void DivideTwoNumbers_50()
+        {
+#line 32
+this.DivideTwoNumbers("50", "2", "divide", "25", ((string[])(null)));
+#line hidden
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]
