@@ -9,6 +9,9 @@ namespace PooVueling
 {
     public class Calculadora : ICalculadora, ICloneable
     {
+        public int FirstNumber { get; set; }
+        public int SecondNumber { get; set; }
+
         public static readonly ILog log = LogManager
             .GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 

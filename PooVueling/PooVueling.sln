@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.NunitV.Integrati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.Unit.Tests", "PooVueling.Unit.Tests\PooVueling.Unit.Tests.csproj", "{811691CB-75F7-49AA-94D9-F0CC07B17666}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingPoo.Behaviour.Tests", "SpecFlowUnitTest\VuelingPoo.Behaviour.Tests.csproj", "{FF6FA64B-D507-419B-8B11-86679ABF89CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{811691CB-75F7-49AA-94D9-F0CC07B17666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{811691CB-75F7-49AA-94D9-F0CC07B17666}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{811691CB-75F7-49AA-94D9-F0CC07B17666}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF6FA64B-D507-419B-8B11-86679ABF89CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6FA64B-D507-419B-8B11-86679ABF89CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6FA64B-D507-419B-8B11-86679ABF89CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6FA64B-D507-419B-8B11-86679ABF89CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
