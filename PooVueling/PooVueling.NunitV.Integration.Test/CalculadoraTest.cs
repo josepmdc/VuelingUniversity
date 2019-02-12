@@ -41,10 +41,8 @@ namespace PooVueling.NunitV.Integration.Test
         [TestCase(80, 0)]
         public void DivisionByZero(int num1, int num2)
         {
-            Assert.That(() => iCalculadora.Division(num1, num2),
-            Throws.TypeOf<DivideByZeroException>());
+            Assert.That(() => iCalculadora.Division(num1, num2), Throws.TypeOf<DivideByZeroException>());
         }
-
 
     }
 }
