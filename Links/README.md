@@ -10,7 +10,7 @@
 
 ## Custom attributes C#
 
-- [ ] https://stackoverflow.com/questions/4879521/how-to-create-a-custom-attribute-in-c-sharp
+- [x] https://stackoverflow.com/questions/4879521/how-to-create-a-custom-attribute-in-c-sharp
 
 ## JWT .NET 
 
@@ -22,13 +22,18 @@
 
 ## Generics C#
 
-- [ ] https://www.tutorialsteacher.com/csharp/csharp-generics
+- [x] https://www.tutorialsteacher.com/csharp/csharp-generics
 
-- [ ] https://thatcsharpguy.com/post/genericos-c-sharp-clases/
+- [x] https://thatcsharpguy.com/post/genericos-c-sharp-clases/
 
 ## Object Lifetime
 
-- [ ] https://www.c-sharpcorner.com/UploadFile/b08196/object-lifetime-in-net-framework/
+- [x] https://www.c-sharpcorner.com/UploadFile/b08196/object-lifetime-in-net-framework/
+- [ ] https://www.c-sharpcorner.com/UploadFile/b08196/idisposable-interface-in-C-Sharp/
+
+## Stack vs Heap
+
+- [x] https://www.gribblelab.org/CBootCamp/7_Memory_Stack_vs_Heap.html
 
 ## Git
 
@@ -42,7 +47,7 @@
 
 ## Log4net
 
-- [ ] https://stackify.com/log4net-guide-dotnet-logging/
+- [x] https://stackify.com/log4net-guide-dotnet-logging/
 
 ## Trace Log
 

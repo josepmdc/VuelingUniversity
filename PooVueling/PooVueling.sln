@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling", "PooVueling\Po
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationTier", "PresentationTier", "{B4DB7355-A15D-457F-A368-750D5AD037CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.Integration.Tests", "PooVuelingIntegrationTests\PooVueling.Integration.Tests.csproj", "{5649D203-408E-48FF-B8BB-F8599BFC521A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.Integration.Tests", "PooVueling.Integration.Tests\PooVueling.Integration.Tests.csproj", "{5649D203-408E-48FF-B8BB-F8599BFC521A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.NunitV.Integration.Test", "PooVueling.NunitV.Integration.Test\PooVueling.NunitV.Integration.Test.csproj", "{8C6C0975-31AB-47CA-8A01-CF9A973D4289}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PooVueling.Unit.Tests", "PooVueling.Unit.Tests\PooVueling.Unit.Tests.csproj", "{811691CB-75F7-49AA-94D9-F0CC07B17666}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingPoo.Behaviour.Tests", "SpecFlowUnitTest\VuelingPoo.Behaviour.Tests.csproj", "{FF6FA64B-D507-419B-8B11-86679ABF89CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VuelingPoo.Behaviour.Tests", "VuelingPoo.Behaviour.Tests\VuelingPoo.Behaviour.Tests.csproj", "{FF6FA64B-D507-419B-8B11-86679ABF89CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
