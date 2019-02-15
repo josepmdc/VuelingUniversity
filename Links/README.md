@@ -56,3 +56,11 @@
 ## Reflection
 
 - [ ] https://stackify.com/what-is-c-reflection/
+
+## Docker
+
+- [ ] https://www.adictosaltrabajo.com/2015/07/29/docker-for-dummies/
+
+## Design Patterns
+
+[ ] https://www.dofactory.com/net/design-patterns
