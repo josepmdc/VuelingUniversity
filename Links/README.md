@@ -63,4 +63,4 @@
 
 ## Design Patterns
 
-[ ] https://www.dofactory.com/net/design-patterns
+- [ ] https://www.dofactory.com/net/design-patterns
